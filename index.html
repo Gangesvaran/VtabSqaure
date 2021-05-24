@@ -14,9 +14,10 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!--script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -475,70 +476,92 @@
               </div>
           </div>
         </div>
-      </div>
+      </div><br><br><br>
       <!-- Strategy-->
       <div class="container">
         <div class="text-center">
           <header class="section-header">
-              <h2 class="section-title">Strategy</h2>
+              <h2 class="section-title">Our Strategy</h2>
             </header>
           <p class="section-subheading text-muted">No individual can win a game by himself. - Pele</p>
       </div>
-      <div class="slider owl-carousel">
-        <div class="card">
-          <div class="img"><img src="assets/img/about/1.jpg" alt=""></div>
-          <div class="content">
-            <div class="title">Briana Tozour</div>
-            <div class="sub-title">Graphic Designer</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
-            <div class="btn">
-              <button>Read more</button>
+      <div class="row">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto">
+            <div class="carousel-item col-md-4 active">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="assets/img/portfolio1/1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Understand Objectives</h4>
+                  <p class="card-text">We understand the objectives of the clients and provide them the right solution.</p>
+                 
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img"><img src="assets/img/about/2.jpg" alt=""></div>
-          <div class="content">
-            <div class="title">Pricilla Preez</div>
-            <div class="sub-title">Web Developer</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
-            <div class="btn">
-              <button>Read more</button>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="assets/img/portfolio1/2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Strategic Planning</h4>
+                  <p class="card-text">We set priorities and allocate resources with implementation guidelines. </p>
+                 
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="img"><img src="assets/img/about/3.jpg" alt=""></div>
-          <div class="content">
-            <div class="title">Eliana Maia</div>
-            <div class="sub-title">App Developer</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
-            <div class="btn">
-              <button>Read more</button>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="assets/img/portfolio1/3.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Communication</h4>
+                  <p class="card-text">Our communication skills helps us in maintaining a healthy and efficient relationship within organization as well as with our clients.</p>
+                 
+                </div>
+              </div>
             </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="assets/img/portfolio1/4.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Implementation</h4>
+                  <p class="card-text">We plan, design , test and implement with a proper action procedures in place.</p>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-4">
+              <div class="card">
+                <img class="card-img-top img-fluid" src="assets/img/portfolio1/5.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title">Monitoring</h4>
+                  <p class="card-text">We support monitoring the health of the application / an infrastructure post implementation and ensure its up all the time. </p>
+                 
+                </div>
+              </div>
+            </div>
+            
           </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
-    </div>
-      <script>
-        $(".slider").owlCarousel({
-          loop: true,
-          autoplay: true,
-          autoplayTimeout: 1000, //2000ms = 2s;
-          autoplayHoverPause: true,
-        });
-      </script>
-  
+      </div><br><br><br><br><br>
+      
         <!-- Contact-->
+        <div class="text-center">
+          <header class="section-header">
+              <h2 class="section-title">Contact Us</h2>
+            </header>
+                  
+  </div><br>
         <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <header class="section-header">
-                        <h2 style="color: #fff;" class="section-title">Contact Us</h2>
-                      </header>
-                            
-            </div>
-                    <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3--><br>
+            <div class="container-fluid">
+                 <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3--><br>
                 </div>
                 <form id="contactForm">
                     <div class="row align-items-stretch mb-5 mx-2">
@@ -575,6 +598,7 @@
                 </form>
             </div>               
 </section>
+
      
         <!-- Footer-->
         <footer class="footer py-4">
@@ -608,6 +632,8 @@
         <script src="js/scripts.js"></script>
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -626,7 +652,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--script type="text/javascript">
     $(window).on('load',function(){
         $('.preloader').addClass('complete')
@@ -635,7 +661,7 @@
     <script>
 $(document).ready(function() {
 //Preloader
-preloaderFadeOutTime = 4000;
+preloaderFadeOutTime = 5000;
 function hidePreloader() {
 var preloader = $('.preloader');
 preloader.fadeOut(preloaderFadeOutTime);
@@ -764,15 +790,7 @@ hidePreloader();
     <div class="preloader">
         <div class="loader"> </div>
     </div>
-    <!--script>
-         setTimeout(function(){
-            window.location.href = 'Home.php';
-         }, 10000);
-      </script-->
-    <!--iframe width="560" height="315" src="https://www.youtube.com/embed/UTiXQcrLlv4?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe-->
-    <?php 
-    //header('Location: Home.php');
-    ?>
+    
     
 </body>
 </html>
