@@ -21,7 +21,63 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+    <style>
+        .loader:before, .loader:after{
+        content: '';
+        border: .5em solid #7aab40;
+        border-radius: 50%;
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: loader 2s infinite;
+        opacity: 0;
+    }
+    .loader:before{
+        animation-delay: .5s;
+    }
+    @keyframes loader{
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            transform: scale(1);
+            opacity: 0;
+        }
+
+    }
+    #preloader {
+        position: fixed;
+        z-index: 999999;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+}
+
+#preloader .loader {
+    border: 0 solid transparent;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: calc(50vh - 200px);
+        left: calc(50vw - 120px);
+}
+
+</style>
     <body id="page-top">
+        <div id="preloader">
+            <div class="loader">  
+                <img src="./assets/VTabicon.ico" alt="">
+                            <h1><span style="color:#d73a95"> V</span><Span style="color:#7aab40;">Tab</Span><span style="color:#3e6ab6"> Square</span></h1>
+                <!--img src="https://www.cyberdudenetworks.com/assets/img/assets/preloader-logo.png" alt="CyberDude networks logo"--> 
+            </div>
+        </div>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container-fluid">
@@ -668,6 +724,35 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  
+        
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/jquery.min.js"></script>
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/moderniz.min.js"></script>
+        
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/revslider.min.js"></script> 
+        
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/waypoints.min.js"></script>
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/parallax.min.js"></script>
+         
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/cubeportfolio.min.js"></script>
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/owlcarousel.min.js"></script>
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/tweetie.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD3JE1T5ssqLMdfRgR1bErpuWNBtIMHbI"></script>
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/gmap3.min.js"></script>
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/wow.min.js"></script>
+        <script src="https://www.cyberdudenetworks.com/assets/js/plugins/counterup.min.js"></script> 
+
+        
+
+
+        <script src="./js/loader.js"></script>  
+        <script>
+    $(window).ready(function() {
+    setTimeout(function() {
+        $('.loader').fadeOut('slow');
+        $('#preloader').delay(350).fadeOut('slow');
+    }, 5000);
+});
+</script>
+</script>
 </body>
 </html>
