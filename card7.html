@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color: #3d3d3d;
+    padding: 0px;
+    margin:0px;
+    width:100%;
+    font-family: 'Lato';
+}
+.wrappers{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+    max-width: 100%;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.carder{
+    flex: 1;
+    flex-basis: 350px;
+    flex-grow: 0;
+    height: 440px;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    overflow: hidden;
+    position: relative;
+}
+.carder img{
+    width: 100%;
+    height:100%;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+}
+.descriptions{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(255,255,255,.7);
+    width:100%;
+    height:100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+}
+.carder:hover .descriptions{
+    left:0px;
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
+}
+.carder:hover{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+    transform: scale(.97);
+}
+.carder:hover img{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+}
+.carder h1{
+    color: #ff3838;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+.carder p{
+    line-height: 24px;
+    height: 70%;
+}
+.carder button{
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    background-color: #ff3838;
+    color:#fff;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    transition: all .5s ease-in-out;
+}
+.carder button:hover{
+    transform: scale(.95) translateX(-5px);
+    transition: all .5s ease-in-out;
+}
+
+
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="wrappers">
+            <div class="carder">
+                <img src="./assets/img/portfolio/app1.jpg" alt="">
+                <div class="descriptions">
+                    <h1>John Wick 3</h1>
+                    <p>
+                        After gunning down a member of the High Table -- the shadowy international assassin's guild -- legendary hit man John Wick finds himself stripped of the organization's protective services. Now stuck with a $14 million bounty on his head, Wick must fight his way through the streets of New York as he becomes the target of the world's most ruthless killers.
+                    </p>
+                    <button>
+                        <i class="fab fa-youtube"></i>
+                        Play trailer on YouTube
+                    </button>
+                </div>
+            </div>
+            <div class="carder">
+                <img src="./assets/img/portfolio/app2.jpg" alt="">
+                <div class="descriptions">
+                    <h1>John Wick 3</h1>
+                    <p>
+                        After gunning down a member of the High Table -- the shadowy international assassin's guild -- legendary hit man John Wick finds himself stripped of the organization's protective services. Now stuck with a $14 million bounty on his head, Wick must fight his way through the streets of New York as he becomes the target of the world's most ruthless killers.
+                    </p>
+                    <button>
+                        <i class="fab fa-youtube"></i>
+                        Play trailer on YouTube
+                    </button>
+                </div>
+            </div>
+            <div class="carder">
+                <img src="./assets/img/portfolio/app3.jpg" alt="">
+                <div class="descriptions">
+                    <h1>Equalizer 2</h1>
+                    <p>
+                        If you have a problem and there is nowhere else to turn, the mysterious and elusive Robert McCall will deliver the vigilante justice you seek. This time, however, McCall's past cuts especially close to home when thugs kill Susan Plummer -- his best friend and former colleague. Now out for revenge, McCall must take on a crew of highly trained assassins who'll stop at nothing to destroy him.                </p>
+                    <button>
+                        <i class="fab fa-youtube"></i>
+                        Play trailer on YouTube
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
