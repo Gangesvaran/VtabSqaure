@@ -1,85 +1,1073 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="3.5; url=index1.html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/VTabicon.ico" />
-    <title>Vtab Square</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+	<!-- Mobile Metas -->
+   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   
+   <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/Images/VTabicon.ico" />
+  
+   <!-- Font Awesome icons (free version)-->
+	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+ 
+   <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        
+    <title>VTab Square</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/slider.css">
+    
+    <style>
+        /* navgation link hover effect */
+        .dropdown:hover>.dropdown-menu{
+            display: block;
+        }
+    </style>
+    
 </head>
-<style>
-    .loader_bg{
-        position: fixed;
-        z-index: 999999;
-        background: #fff;
-        width: 100%;
-        height: 100%;
-    }
-    .loader{
-        border: 0 solid transparent;
-        border-radius: 50%;
-        width: 250px;
-        height: 250px;
-        position: absolute;
-        top: calc(50vh - 120px);
-        left: calc(50vw - 120px);
 
-    }
-    .loader:before, .loader:after{
-        content: '';
-        border: .5em solid #7aab40;
-        border-radius: 50%;
-        width: inherit;
-        height: inherit;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: loader 2s infinite;
-        opacity: 0;
-    }
-    .loader:before{
-        animation-delay: .5s;
-    }
-    @keyframes loader{
-        0%{
-            transform: scale(0);
-            opacity: 0;
-        }
-        50%{
-            opacity: 1;
-        }
-        100%{
-            transform: scale(1);
-            opacity: 0;
-        }
-
-    }
-    .container{
-        min-height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .container .img{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-</style>
 <body>
-    <div class="container">
-        <div class="loader_bg">
-            <div class="loader">
-                <div class="img">
-                    <img src="./assets/VTabicon.ico" alt="">
-                    <h1><span style="color:#d73a95"> V</span><Span style="color:#7aab40;">Tab</Span><span style="color:#3e6ab6"> Square</span></h1>
+  <!-- ============= Blue NAV ============= -->
+  <div class="container-fluid">
+  <div id="topContent">
+  <div style="background-color:#0080d1" class="container-fluid" id="topContent"><br></div>
+  </div>   
+ </div>
+ <!-- ============= End of Blue NAV ============= -->
+
+ <!-- ============= NAVBAR COMPONENT ============== -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#page-top"><img src="./assets/Images/VTabicon.ico" alt="" width="30px"></a>
+                <h3 style="font-family: 'Pacifico', cursive;"><span style="color:#d73a95"> V</span><Span style="color:#7aab40;">Tab</Span>
+                    <span style="color:#3e6ab6">Square</span></h3>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main_nav">
+             <!-- right side -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about"> <i class="fas fa-info-circle me-2"></i>About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fas fa-user-cog me-2"></i>Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#web">Business Consulting&raquo;</a>
+                                    <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Business plan</a></li>
+                                    <li><a class="dropdown-item" href="#">Estimation</a></li>
+                                </ul>  </li>
+                                <li><a class="dropdown-item" href="#dataint">IT Solutions&raquo;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Development</a></li>
+                                        <li><a class="dropdown-item" href="#">Enhancement</a></li>
+                                        <li><a class="dropdown-item" href="#">Change request</a></li>
+                                        <li><a class="dropdown-item" href="#">Bug fix</a></li>
+                                        <li><a class="dropdown-item" href="#">Optimization</a></li>
+                                        <li><a class="dropdown-item" href="#">Consulting</a></li>
+                                        <li><a class="dropdown-item" href="#">Support</a></li></ul>
+                              </li>
+                                <li><a class="dropdown-item" href="#SandQ">Quality Testing&raquo;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Manual</a></li>
+                                        <li><a class="dropdown-item" href="#">Automation</a></li>
+                                    </ul></li>
+                                <li><a class="dropdown-item" href="#busint">Support&raquo;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">L1</a></li>
+                                        <li><a class="dropdown-item" href="#">L2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#busint">IT Staffing&raquo;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Resource OnBoarding</a></li>
+                                        <li><a class="dropdown-item" href="#">Contact Hiring</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#busint">Traning&raquo;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Data intergration</th>
+                                                        <th scope="col">Data Analysis</th>
+                                                        <th scope="col">web Development</th>
+                                                        <th scope="col">Data Warehouse</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="row">Informatica</td>
+                                                        <td>Tableau</td>
+                                                        <td>HTML</td>
+                                                        <td>SQL server</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="row">Informatica Cloud</td>
+                                                        <td>PowerBI</td>
+                                                        <td>CSS</td>
+                                                        <td>Oracle</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="row">SSRS</td>
+                                                        <td>Quick View</td>
+                                                        <td>JavaScript</td>
+                                                        <td>MYSQL</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="row">SSIS</td>
+                                                        <td>Quick Sense</td>
+                                                        <td>PHP</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="row"></td>
+                                                        <td>Nprinting</td>
+                                                        <td>Bootstrap</td>
+                                                       
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </li>
+                                       
+                                        <!-- <li><a class="dropdown-item" href="#">Informatica&raquo;</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Informatica Cloud</a></li>
+                                                <li><a class="dropdown-item" href="#">SSRS</a></li>
+                                                <li><a class="dropdown-item" href="#">SSIS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">TABLEAU&raquo;</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">POWERBI</a></li>
+                                                <li><a class="dropdown-item" href="#">QLIK VIEW</a></li>
+                                                <li><a class="dropdown-item" href="#">QLIK SENSE</a></li>
+                                                <li><a class="dropdown-item" href="#">NPRINTING</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Web Development&raquo;</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">HTML</a></li>
+                                                <li><a class="dropdown-item" href="#">CSS</a></li>
+                                                <li><a class="dropdown-item" href="#">PHP</a></li>
+                                                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                                                <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">SQL Server</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Oracle</a></li>
+                                                <li><a class="dropdown-item" href="#">MYSQL</a></li>
+                                            </ul>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="fab fa-accusoft"></i> Technology</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"> Web Development &raquo;</a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">HTML</a></li>
+                                    <li><a class="dropdown-item" href="#">CSS</a></li>
+                                    <li><a class="dropdown-item" href="#">PHP</a></li>
+                                    <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                                    <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                                </ul></li>
+                                <li><a class="dropdown-item" href="#"> Data Integration &raquo;</a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Informatica</a></li>
+                                    <li><a class="dropdown-item" href="#">Informatica Cloud</a></li>
+                                    <li><a class="dropdown-item" href="#">SSRS</a></li>
+                                    <li><a class="dropdown-item" href="#">SSIS</a></li>
+                                </ul></li>
+                               <li> <a class="dropdown-item" href="#"> Data Analytics &raquo;</a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Tableau</a></li>
+                                    <li><a class="dropdown-item" href="#">PowerBI</a></li>
+                                    <li><a class="dropdown-item" href="#">Qlik view</a></li>
+                                    <li><a class="dropdown-item" href="#">Qlik sense</a></li>
+                                    <li><a class="dropdown-item" href="#">Nprinting</a></li>
+                                </ul></li>
+                                <li><a class="dropdown-item" href="#"> Quality Testing &raquo;</a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Selinuim</a></li>
+                                </ul></li>
+                                <li><a class="dropdown-item" href="#"> Data Warehouse &raquo;</a>
+                                <ul class="submenu dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">SQl Server</a></li>
+                                    <li><a class="dropdown-item" href="#">Oracle</a></li>
+                                    <li><a class="dropdown-item" href="#">Mysql</a></li>
+                                    </ul></li>
+                                </li>
+                        </li>
+                        </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio"><i class="far fa-file-word me-2"></i>Portfolio</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#ourjounery"><i class="fas fa-walking me-2"></i>Jounery</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#team"><i class="fas fa-user-friends me-2"></i>Careers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-id-card me-2"></i>Contact</a></li>
+                        <li class="nav-item"><a class="nav-link border border-white rounded-pill btn-outline-light me-3" href="./login/sign.html"><i
+                              class="fas fa-sign-in-alt"></i> Login</a></li>
+                    </ul>
+                    <!-- end of right side -->
+    
+
+                </div> <!-- navbar-collapse.// -->
+            </div> <!-- container-fluid.// -->
+        </nav>
+    </div>
+    <!-- ============= NAVBAR END ============== -->
+    
+<!-- ============= White NAV ============= -->
+    <div class="container-fluid">
+        <div style="background-color:#fff" class="container-fluid"><br></div>
+        </div>
+    </div>
+<!-- =============End of White NAV ============= -->
+  
+<!--=============  SLIDER =============  -->
+
+<div class="container-fluid">
+ <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/Images/slider/pexels-chris-schippers-421927.jpg" class="d-block w-100  " style="height: 500px;" alt=" " >   
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/Images/slider/pexels-marc-mueller-380768.jpg" class="d-block w-100" style="height: 500px;" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/Images/slider/pexels-philipp-birmes-830891.jpg" class="d-block w-100" style="height: 500px;" alt="..." >
+    </div>
+    <div class="carousel-item">
+        <img src="./assets/Images/slider/pexels-pixabay-221537.jpg" class="d-block w-100" style="height: 500px;"
+            alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="./assets/Images/slider/pexels-pixabay-260931.jpg" class="d-block w-100" style="height: 500px;"
+            alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="./assets/Images/slider/pexels-pixabay-267507.jpg" class="d-block w-100" style="height: 500px;"
+            alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="./assets/Images/slider/pexels-pixabay-302831.jpg" class="d-block w-100" style="height: 500px;"
+            alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="./assets/Images/slider/pexels-pixabay-356056.jpg" class="d-block w-100" style="height: 500px;"
+            alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="./assets/Images/slider/pexels-pixabay-459654.jpg" class="d-block w-100" style="height: 500px;"
+            alt="...">
+    </div>
+    <div class="carousel-item">
+        <img src="./assets/Images/slider/pexels-pixabay-459654.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>   
+	
+</div>  
+<!--=============End of SLIDER =============  -->
+
+<!-- ================  ABOUT US SECTION ================ -->
+<div class="container-fulid mt-5">
+<section id="about">
+    <div class="row">
+      
+        <div class="container" data-aos="fade-up">
+    
+          <header class="section-header">
+            <h2 class="text-center">About Us</h2>
+            <p class="p-3">As An Emerging IT & ITeS service provider, VTAB SQUARE is committed to maintain the highest standards of data
+              quality and security with 18+ years of founder's experience.We are operating since 2019 to achieve business
+              transformation and growth through our service that boost process and operational efficiencies.</p>
+          </header>
+    
+    <div class="wrappers">
+        <div class="carder">
+            <img src="./assets/Images/about/about-vision.jpeg" alt="">
+            <div class="text-center">
+              <h3 class="mt-3">Our Vision</h3>
+            </div>
+            <div class="descriptions">
+                <p class="d-flex align-items-center">
+                  Vision without action is merely a dream. Action without vision just passes the time. Vision with action
+                  can change the world.
+                </p>
+                
+            </div>
+        </div>
+        <div class="carder">
+            <img src="./assets/Images/about/about-plan.jpeg" alt="">
+            <div class="text-center">
+              <h3 class="mt-3">Our Strategy</h3>
+            </div>            
+            <div class="descriptions">
+                <p class="d-flex align-items-center">
+                    After gunning down a member of the High Table -- the shadowy international assassin's guild -- legendary hit man John Wick finds himself stripped of the organization's protective services. Now stuck with a $14 million bounty on his head, Wick must fight his way through the streets of New York as he becomes the target of the world's most ruthless killers.
+                </p> 
+            </div>
+        </div>
+        <div class="carder">
+            <img src="./assets/Images/about/about-mission.jpeg" alt="">
+            <div class="text-center">
+              <h3 class="mt-3">Our Mission</h3>
+            </div>
+            <div class="descriptions">
+                
+                <p class="d-flex align-items-center"> To exeed our Customer expectations in Quality, Delivery, and cost through continuous improvement and
+                  customer interaction.</p>
+                 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;" class="container mt-3">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Read more
+</button>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <img  class="img-fluid" src="./assets/Images/strategy.JPG"></div>
+        <!-- <h3 class="text-center">Our Strategy</h2><b3><br>
+       <h4>Understand Objectives</h4> 
+       <p>We understand the objectives of the clients and provide them the 
+        right solution.</p> 
+        <h4>Strategic Planning
+        </h4>
+        <p>We set priorities and allocate resources with implementation guidelines 
+          .</p> 
+          <h4>Communication
+
+          </h4> 
+          <p>Our communication skills helps us in maintaining a healthy and efficient relationship within organization as well as with our clients
+            .</p>  
+            <h4>Implementation
+            </h4>
+           <p>We plan, design , test and implement with a proper action procedures in place.
+          </p>
+          <h4>Monitoring</h4>
+          <p>We support monitoring the health of the application / an infrastructure post implementation and ensure its up all the time</p> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- end of modal content -->
+<!-- ================ END ABOUT US SECTION ================ -->
+
+<!-- ================ SERVICE SECTION ================ -->
+<section class="page-section" id="services">
+    <div class="container mt-5">
+        <div class="text-center">
+
+            <header class="section-header">
+                <h2 class="section-title">Services</h2>
+            </header>
+            <h3 class="section-subheading text-muted">"Customer service is about empathy"</h3>
+        </div>
+        <div class="box1">
+            <div class="card">
+                <div class="imgBox">
+                    <img src="./assets/Images/slide/Business Consultant.jpg" alt="images">
+                </div>
+                <div class="details">
+                    <h2 style="color: #fff;"><br>Business Consulting
+                        <span>We Develop Interactive E-Commerce & CRM Portal.</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img src="./assets/Images/slide/IT solutions.jpg" alt="images">
+                </div>
+                <div class="details">
+                    <h2 style="color: #fff; padding-bottom: 50px;"><br>IT Solutions
+                        <!--span>We Design and Development ETL Program for Integrating Data into Warehouse</!--span-->
+                    </h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img src="./assets/Images/slide/Support & Quality.jpg" alt="images">
+                </div>
+                <div class="details">
+                    <h2 style="color: #fff; padding-bottom: 50px;"><br>Quality Testing
+                        <!--span>We Provide Application & Server Support</!--span-->
+                    </h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img src="./assets/Images/slide/staffing.jpg" alt="images">
+                </div>
+                <div class="details">
+                    <h2 style="color: #fff;"><br>IT Staffing
+                        <!--span>We Build Reporting Tools for Business Analysis</!--span-->
+                    </h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBox">
+                    <img src="./assets/Images/slide/Support.jpg" alt="images">
+                </div>
+                <div class="details text-white">
+                    <h2 style="color: #fff;"><br>Support
+                        <!--span>We Provide Application & Server Support
+        </!--span-->
+                    </h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBox">
+                    <img src="./assets/Images/slide/Web-development.jpg" alt="images">
+                </div>
+                <div class="details">
+                    <h2 style="color: #fff;"><br>Web Development
+                        <!--span>We Provide Application & Server Support
+        </!--span-->
+                    </h2>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </div>
+
+</section>
+<!-- ================ SERVICE SECTION ================ -->
+    <!-- ======= Portfolio Section ======= -->
+<div class="container mt-5">
+    <header class="section-header">
+        <h2 class="section-title">Our Portfolio</h2>
+      </header>
+
+  <section id="portfolio" class="section-bg">
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class=" col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Reporting</li>
+            <li data-filter=".filter-card">Website</li>
+            <li data-filter=".filter-web">Content here</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1605822964483-d64f5e574ffc?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGZ1bmRhbWVudGFsJTIwcmlnaHRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                class="img-fluid" alt="">
+              <!--a href="assets/img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="bi bi-plus"></i></!--a>
+                <a-- href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a-->
+            </figure>
+
+            <div class="portfolio-info">
+              <h6>FUNDAMENTAL RIGHTS
+              </h6>
+              <p>Reporing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1588064643233-49210b27b82e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80s"
+                class="img-fluid" alt="">
+              <!--a href="assets/img/portfolio/web3.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Web 3"><i class="bi bi-plus"></i></!--a>
+                <a-- href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a-->
+            </figure>
+
+            <div class="portfolio-info">
+              <h6>FREELANCER PROJECTS
+              </h6>
+              <p>Reporting</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c29mdHdhcmUlMjBjb21wYW55fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                class="img-fluid" alt="">
+              <!--a href="assets/img/portfolio/app2.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="App 2"><i class="bi bi-plus"></i></!--a>
+                <a-- href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a-->
+            </figure>
+
+            <div class="portfolio-info">
+              <h6> R INDIA R SOFTWARE PVT LTD</h6>
+
+              <p>Website</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW50ZXJuYXRpb25hbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                class="img-fluid" alt="">
+              <!--a href="assets/img/portfolio/card2.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Card 2"><i class="bi bi-plus"></i></!--a>
+                <a-- href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a-->
+            </figure>
+
+            <div class="portfolio-info">
+              <h6> VITHAI INTERNATIONAL SERVICES
+              </h6>
+              <p>Website</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="https://wallpapercave.com/wp/wp3779033.jpg" class="img-fluid" alt="">
+              <!--a href="assets/img/portfolio/web2.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Web 2"><i class="bi bi-plus"></i></!--a>
+                <a-- href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a-->
+            </figure>
+
+            <div class="portfolio-info">
+              <h6>PAKKA TOURS & TRAVELS
+              </h6>
+              <p>Website</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1512061942530-e6a4e9a5cf27?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG9zcGl0YWxpdHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                class="img-fluid" alt="">
+              <!--a href="assets/img/portfolio/app3.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="App 3"><i class="bi bi-plus"></i></!--a>
+                <a-- href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a-->
+            </figure>
+
+            <div class="portfolio-info">
+              <h6>OREGANO HOTEL MANAGEMENT
+              </h6>
+              <p>Content here</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+  <!-- End Portfolio Section -->
+
+
+<!--  ================ JOURNEY SECTION ================  -->
+<div class="container-fulid mt-5">
+<section class="page-section" id="ourjounery">
+    <div class="container">
+        <div class="text-center">
+            <header class="section-header my-5">
+                <h2 class="section-title">Our Jounery</h2>
+            </header>
+            <h3 class="section-subheading text-muted my-5">we have started a perpetual journey.</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/Images/about2/1.jpg"
+                        alt="..." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2007</h4>
+                        <h4 class="subheading">Vision & Idea </h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted"></p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/Images/about2/2.jpg"
+                        alt="..." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2010</h4>
+                        <h4 class="subheading">Technology</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Started working on Emerging Technologies in the Market</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/Images/about2/3.jpg"
+                        alt="..." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4> 2015</h4>
+                        <h4 class="subheading">Business</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Worked in Different Industries</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/Images/about2/4.jpg"
+                        alt="..." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2016</h4>
+                        <h4 class="subheading">Process</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Implemented Projects with Streamlined Process</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/Images/about2/4.jpg"
+                        alt="..." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2017</h4>
+                        <h4 class="subheading">Practice</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Provided Consultation to Startups</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/Images/about2/3.jpg"
+                        alt="..." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2019</h4>
+                        <h4 class="subheading">Launch</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Started VTAB Square Pvt Ltd</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/Images/about2/4.jpg"
+                        alt="..." />
+                </div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4>2020</h4>
+                        <h4 class="subheading">Started services</h4>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="text-muted">Begin Operation</p>
+                    </div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Be Part
+                        <br />
+                        Of Our
+                        <br />
+                        Story!
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+</div>
+<!--  ================ END OFJOURNEY SECTION ================  -->
+
+<!--  ================ TEAM SECTION ================  -->
+<section class="page-section bg-light" id="team">
+    <div class="container mt-5">
+        <div class="text-center">
+            <header class="section-header">
+                <h2 class="section-title my-5">Our Amazing Team</h2>
+            </header>
+            <h3 class="section-subheading text-muted my-5">No individual can win a game by himself. - Pele</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/images/team/1.jpg" alt="..." />
+                    <h4>BALAMURALIDHARAN THANGAVELU</h4>
+                    <p class="text-muted">Founder</p>
+                    <p>He is a Technology Consultant who comes with an IT experience 13 years and the founder of VTAB
+                        Square Pvt
+                        Ltd. He is expertize in Dataware Housing , Data Analytics & Web Development. He has vast
+                        knowledge in
+                        Healthcare, Logistics, Banking & Commercial.
+                    </p>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/images/team/3.jpg" alt="..." />
+                    <h4>THANGAVELU <br>SUBBIAN</h4>
+                    <p class="text-muted">Director</p>
+                    <p>He is a director and investor who comes with 40+ years of experience in auditing (Agriculture
+                        department).
+                    </p><br><br><br>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="assets/images/team/2.jpg" alt="..." />
+                    <h4>BRINDHA <br>PALANISWAMY</h4>
+                    <p class="text-muted">Director</p>
+                    <p>She is a Director who has 8 Years of Operations Experience. She is expertize in Technical support
+                        ,
+                        customer support services and operations. She has a vast knowledge in infrastructure support
+                        ,audit
+                        procedures ,KPI measures and support transition</p>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2 rounded-circle" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <!--div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                </div-->
+    </div>
+</section>
+<!--  ================ END OF TEAM SECTION ================  -->
+
+<!--  ================ CONTACT SECTION ================  -->
+<section class="page-section" id="contact">
+<div class="container-fulid mt-5">
+    <div class="container">    
+        <div class="text-center">
+            <header class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+            </header>
+            <p class="section-subheading text-muted"><i>we have started a perpetual journey.</i></p>
+        </div>
+        <div class="content">
+            <!-- card -->
+            <div class="card1">
+    
+                <div class="icon"><a href="https://wa.me/+919962597975?text=Hello%2C%20Vtab%20Square%20!!!%20">
+                    <i style="color:#fff;" class="fab fa-whatsapp  fa-3x"></i></a></div>
+                <p class="title">WhatsApp</p>
+    
+    
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="card1">
+    
+                <div class="icon">
+                    <a href="https://tawk.to/chat/60b4da4e6699c7280da9e059/1f7179hjt">
+                        <i style="color:#fff;" class="far fa-comments fa-3x"></i>
+                    </a>
+
+                </div>
+                <p class="title">Live Chat</p>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="card1">
+    
+                <div class="icon">
+                    <a href="mailto:balamuraleee@gmail.com">
+                        <i style="color:#fff;" class="far fa-envelope fa-3x"></i>
+                    </a>
+                </div>
+                <p class="title">E-Mail</p>
+    
+            </div>
+
+            <!-- end card -->
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!--  ================ END OF CONTACT SECTION ================  -->
+
+<!--  ================FOOTER  SECTION ================  -->
+<div class="container-fulid">
+
+    <footer class="text-center text-lg-start bg-dark  text-muted">
+
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-5 border-bottom text-white">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="#" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/SquareVtab" target="_blank" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section><br>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section>
+            <div class="container text-center  mt-1 text-white">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto border-end border-bottom">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>VTAB SQUARE
+                        </h6>
+                        <p>As An Emerging IT & ITeS service provider, VTAB SQUARE is committed to maintain the highest
+                            standards
+                            of
+                            data quality and security with 18+ years of founder's experience.We are operating since 2019
+                            to achieve
+                            business transformation and growth through our service that boost process and operational
+                            efficiencies.
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto border-end border-bottom">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Services
+                        </h6>
+                        <p>
+                            <a href="#web" class="text-reset">Web-development</a>
+                        </p>
+                        <p>
+                            <a href="#dataint" class="text-reset">Data Integration
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#SandQ" class="text-reset">Support & Quality
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#busint" class="text-reset">Business Intelligence
+                            </a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto border-end border-bottom">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Expertise in
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Healthcare</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Logistics
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Banking
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Commerical</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto border-end border-bottom">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="far fa-building me-3"></i>
+                            <a style="color: #fff; text-decoration: none;" target="_blank"
+                                href="https://goo.gl/maps/LfydR9YCm9eoitJy5">17/99,
+                                5th street 2nd Floor, Iyyappa Nagar
+                                Coimbatore, Tamil Nadu 641008
+                                India</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            <a style="color: #fff; text-decoration: none;"
+                                href="mailto: balamuraleee@gmail.com">balamuraleee@gmail.com</a>
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i>
+                            <a style="color: #fff; text-decoration: none;" href="tel:+919962597975">099625 97975</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+
+        <!-- Copyright -->
+        <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="#">VTAB SQUARE</a>
+        </div>
+        <!-- Copyright -->
+        
+
+
+    </footer>
+
+</div>
+<!--  ================ END OF FOOTER SECTION ================  -->
+
+<!--  ================PAGE UP SECTION ================  -->  
+<button style="background:#212529; border-color:#212529" class="btn btn-primary scroll-top" data-scroll="up" type="button">
+    <i class="fas fa-arrow-up"></i>
+    </button>
+<!--  ================PAGE UP SECTION ================  -->
+
+    <!--Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous">
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+  
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+        
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.scroll-top').fadeIn();
+                } else {
+                    $('.scroll-top').fadeOut();
+                }
+            });
+        
+            $('.scroll-top').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 100);
+                return false;
+            });
+        
+        });
+        </script>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/60b4da4e6699c7280da9e059/1f7179hjt';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
+
 </html>
+
+
