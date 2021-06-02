@@ -181,61 +181,6 @@ body {
 }
 /* Section Header End */
 
-/* Service */
-.box {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 30px;
-}
-.box .cards {
-  width: 300px;
-  position: relative;
-  height: 250px;
-  background: #fff;
-  margin: 30px 10px;
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
-}
-.box .cards:hover {
-  height: 325px;
-}
-.box .cards .imgBx {
-  position: relative;
-  width: 225px;
-  height: 250px;
-  top: -50px;
-  left: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-}
-.box .cards .imgBx img {
-  width: 225px;
-  height: 250px;
-  border-radius: 10px;
-}
-.box .cards .contents {
-  position: relative;
-  margin-top: -140px;
-  padding: 10px 15px;
-  text-align: center;
-  color: #111;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-}
-.box .cards:hover .contents {
-  visibility: visible;
-  opacity: 1;
-  margin-top: -40px;
-  transition-delay: 0.3s;
-}
-
-/* Service End */
 
 /* Journey */
 .timeline {
@@ -443,7 +388,7 @@ body {
   display: inline-block;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
-  color: #fff;
+  color: #000;
   font : normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
@@ -454,7 +399,7 @@ body {
 }
 
 #top-page a {
-  padding-top: 70px;
+  padding-top: 40px;
 }
 #top-page a span {
   position: absolute;
@@ -463,8 +408,8 @@ body {
   width: 30px;
   height: 30px;
   margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb05 1.5s infinite;
@@ -781,22 +726,20 @@ body {
 /* End Contact Us */
 
 /* Service */
-.box1 {
-  width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 15px;
-  margin: 0 auto;
-}
-
 .card {
-  position: relative;
   width: 300px;
-  height: 350px;
-  background: #000;
-  margin: 0 auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 250px;
+  background: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.card:hover {
+  height: 325px;
 }
 
 .card:before,
@@ -872,7 +815,8 @@ body {
   display: block;
   margin-top: 5px;
 }
-/* End Service */
+/* End Service*/
+
 
 /* Portfolio */
 /* Portfolio Section
