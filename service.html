@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/Images/VTabicon.ico" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>VTab Square</title>
+    <link rel="stylesheet" href="./assets/css/nav.css">
+  
+    
+    <style>
+ header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image:linear-gradient(rgba(15, 14, 14, 0.644),rgba(15, 12, 12, 0.555)) , url("../assets/Images/slide/Support & Quality.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 500px;
+}
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 13rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    font-style: italic;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+/*  */
+
+
+
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.6%;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+}
+.blog-card a {
+  color: inherit;
+}
+.blog-card a:hover {
+  color: #5ad67d;
+}
+.blog-card:hover .photo {
+  transform: scale(1.3) rotate(3deg);
+}
+.blog-card .meta {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+}
+.blog-card .photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
+.blog-card .details,
+.blog-card .details ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.blog-card .details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  margin: auto;
+  transition: left 0.2s;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.blog-card .details a {
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+}
+.blog-card .details ul li {
+  display: inline-block;
+}
+.blog-card .details .author:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.blog-card .details .date:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "";
+}
+.blog-card .details .tags ul:before {
+  font-family: FontAwesome;
+  content: "";
+  margin-right: 10px;
+}
+.blog-card .details .tags li {
+  margin-right: 2px;
+}
+.blog-card .details .tags li:first-child {
+  margin-left: -4px;
+}
+.blog-card .description {
+  padding: 1rem;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.blog-card .description h1,
+.blog-card .description h2 {
+  font-family: Poppins, sans-serif;
+}
+.blog-card .description h1 {
+  line-height: 1;
+  margin: 0;
+  font-size: 1.7rem;
+}
+.blog-card .description h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  margin-top: 5px;
+}
+.blog-card .description .read-more {
+  text-align: right;
+}
+.blog-card .description .read-more a {
+  color: #5ad67d;
+  display: inline-block;
+  position: relative;
+}
+.blog-card .description .read-more a:after {
+  content: "";
+  font-family: FontAwesome;
+  margin-left: -10px;
+  opacity: 0;
+  vertical-align: middle;
+  transition: margin 0.3s, opacity 0.3s;
+}
+.blog-card .description .read-more a:hover:after {
+  margin-left: 5px;
+  opacity: 1;
+}
+.blog-card p {
+  position: relative;
+  margin: 1rem 0 0;
+}
+.blog-card p:first-of-type {
+  margin-top: 1.25rem;
+}
+.blog-card p:first-of-type:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background: #5ad67d;
+  width: 35px;
+  top: -0.75rem;
+  border-radius: 3px;
+}
+.blog-card:hover .details {
+  left: 0%;
+}
+@media (min-width: 640px) {
+  .blog-card {
+    flex-direction: row;
+    max-width: 1300px;
+  }
+  .blog-card .meta {
+    flex-basis: 40%;
+    height: auto;
+  }
+  .blog-card .description {
+    flex-basis: 60%;
+  }
+  .blog-card .description:before {
+    transform: skewX(-3deg);
+    content: "";
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .blog-card.alt {
+    flex-direction: row-reverse;
+  }
+  .blog-card.alt .description:before {
+    left: inherit;
+    right: -10px;
+    transform: skew(3deg);
+  }
+  .blog-card.alt .details {
+    padding-left: 25px;
+  }
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- ============= Blue NAV ============= -->
+    <div class="container-fluid">
+        <div>
+            <div style="background-color:#0080d1" class="container-fluid" id="topContent"><br></div>
+        </div>
+    </div>
+    <!-- ============= End of Blue NAV ============= -->
+
+    <!-- ============= NAVBAR COMPONENT ============== -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#page-top"><img src="./assets/Images/VTabicon.ico" alt=""
+                        width="30px"></a>
+                <h2 style="font-family: 'Pacifico', cursive;"><span style="color:#d73a95"> V</span><Span
+                        style="color:#7aab40;">Tab</Span>
+                    <span style="color:#3e6ab6">Square</span>
+                </h2>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-uppercase" id="main_nav">
+                    <!-- right side -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index1.html"> <i class="fas fa-home"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"> <i
+                                    class="fas fa-info-circle me-2"></i>About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-cog me-2"></i>Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#web">Business Consulting &nbsp; &#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Business plan</a></li>
+                                        <li><a class="dropdown-item" href="#">Estimation</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#dataint">IT Solutions
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Development</a></li>
+                                        <li><a class="dropdown-item" href="#">Enhancement</a></li>
+                                        <li><a class="dropdown-item" href="#">Change request</a></li>
+                                        <li><a class="dropdown-item" href="#">Bug fix</a></li>
+                                        <li><a class="dropdown-item" href="#">Optimization</a></li>
+                                        <li><a class="dropdown-item" href="#">Consulting</a></li>
+                                        <li><a class="dropdown-item" href="#">Support</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#SandQ">Quality Testing
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Manual</a></li>
+                                        <li><a class="dropdown-item" href="#">Automation</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#busint">Support
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">L1</a></li>
+                                        <li><a class="dropdown-item" href="#">L2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#busint">IT Staffing
+                                    &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        &#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Resource OnBoarding</a></li>
+                                        <li><a class="dropdown-item" href="#">Contract Hiring</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#busint" >Traning
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu"> 
+                                        <li>
+                                            <table class="table table-striped bordered" >
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Data intergration</th>
+                                                        <th scope="col">Data Analysis</th>
+                                                        <th scope="col">web Development</th>
+                                                        <th scope="col">Data Warehouse</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Informatica</td>
+                                                        <td scope="row">Tableau</td>
+                                                        <td scope="row">HTML</td>
+                                                        <td scope="row">SQL server</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Informatica Cloud</td>
+                                                        <td scope="row">PowerBI</td>
+                                                        <td scope="row">CSS</td>
+                                                        <td scope="row">Oracle</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">SSRS</td>
+                                                        <td scope="row">QuickView</td>
+                                                        <td scope="row">JavaScript</td>
+                                                        <td scope="row">MYSQL</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">SSIS</td>
+                                                        <td scope="row">QuickSense</td>
+                                                        <td scope="row">PHP</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row"></td>
+                                                        <td scope="row">Nprinting</td>
+                                                        <td scope="row">Bootstrap</td>
+                                                        <td scope="row"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </li>
+
+                                        <!-- <li><a class="dropdown-item" href="#">Informatica&raquo;</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Informatica Cloud</a></li>
+                                                <li><a class="dropdown-item" href="#">SSRS</a></li>
+                                                <li><a class="dropdown-item" href="#">SSIS</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">TABLEAU&raquo;</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">POWERBI</a></li>
+                                                <li><a class="dropdown-item" href="#">QLIK VIEW</a></li>
+                                                <li><a class="dropdown-item" href="#">QLIK SENSE</a></li>
+                                                <li><a class="dropdown-item" href="#">NPRINTING</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Web Development&raquo;</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">HTML</a></li>
+                                                <li><a class="dropdown-item" href="#">CSS</a></li>
+                                                <li><a class="dropdown-item" href="#">PHP</a></li>
+                                                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                                                <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">SQL Server</a>
+                                            <ul class="submenu dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Oracle</a></li>
+                                                <li><a class="dropdown-item" href="#">MYSQL</a></li>
+                                            </ul>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown"><i
+                                    class="fab fa-accusoft"></i> Technology</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"> Web Development &nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">HTML</a></li>
+                                        <li><a class="dropdown-item" href="#">CSS</a></li>
+                                        <li><a class="dropdown-item" href="#">PHP</a></li>
+                                        <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                                        <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#"> Data Integration
+                                        &nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Informatica</a></li>
+                                        <li><a class="dropdown-item" href="#">Informatica Cloud</a></li>
+                                        <li><a class="dropdown-item" href="#">SSRS</a></li>
+                                        <li><a class="dropdown-item" href="#">SSIS</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a class="dropdown-item" href="#"> Data Analytics
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Tableau</a></li>
+                                        <li><a class="dropdown-item" href="#">PowerBI</a></li>
+                                        <li><a class="dropdown-item" href="#">Qlikview</a></li>
+                                        <li><a class="dropdown-item" href="#">Qliksense</a></li>
+                                        <li><a class="dropdown-item" href="#">Nprinting</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#"> Quality Testing
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Selinuim</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#"> Data Warehouse
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">SQl Server</a></li>
+                                        <li><a class="dropdown-item" href="#">Oracle</a></li>
+                                        <li><a class="dropdown-item" href="#">Mysql</a></li>
+                                    </ul>
+                                </li>
+                        </li>
+                        </li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio"><i
+                                class="far fa-file-word me-2"></i>Portfolio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#team"><i
+                                class="fas fa-user-friends me-2"></i>Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i
+                                class="fas fa-id-card me-2"></i>Contact</a></li>
+                    <li class="nav-item" id="nav-login"><a class="nav-link border border-white rounded-pill  me-3"
+                            href="./login/sign.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                    </ul>
+                    <!-- end of right side -->
+
+
+                </div> <!-- navbar-collapse.// -->
+            </div> <!-- container-fluid.// -->
+        </nav>
+    </div>
+    <!-- ============= NAVBAR END ============== -->
+
+    <!-- ============= White NAV ============= -->
+    <div class="container-fluid">
+        <div style="background-color:#fff" class="container-fluid"><br></div>
+    </div>
+    </div>
+    <!-- =============End of White NAV ============= -->
+
+    <!--  -->
+
+<!-- Masthead-->
+<div class="container-fluid" style="height: 500px;">
+        <header class="masthead">
+            <div class="masthead-heading text-uppercase">Services</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#description">Read More</a>
+        </header>
+    </div>
+<!-- end of Masthead -->
+
+<!--Decription-->
+<section id="description">
+<div class="container-fluid">
+<div class="blog-card my-5">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">John Doe</a></li>
+        <li class="date">Aug. 24, 2015</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Learning to Code</h1>
+      <h2>Opening a door to the future</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+  <div class="blog-card alt my-5">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">Jane Doe</a></li>
+        <li class="date">July. 15, 2015</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Mastering the Language</h1>
+      <h2>Java is not the same as JavaScript</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+  <div class="blog-card my-5">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">John Doe</a></li>
+        <li class="date">Aug. 24, 2015</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Learning to Code</h1>
+      <h2>Opening a door to the future</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+  <div class="blog-card alt my-5">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">Jane Doe</a></li>
+        <li class="date">July. 15, 2015</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Mastering the Language</h1>
+      <h2>Java is not the same as JavaScript</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+    
+</body>
+</html>

@@ -56,8 +56,8 @@
                         <li class="nav-item"><a class="nav-link" href="#about"> <i
                                     class="fas fa-info-circle me-2"></i>About</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" onclick="services()">
                                 <i class="fas fa-user-cog me-2"></i>Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -183,8 +183,9 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i
-                                    class="fab fa-accusoft"></i> Technology</a>
+                            <a class="nav-link dropdown-toggle" href="tech.html" data-bs-toggle="dropdown" onclick="technology()"><i
+                                class="fab fa-accusoft"></i>Technology</a>
+                                
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#"> Web Development &nbsp;&nbsp;&#9735;</a>
                                     <ul class="submenu dropdown-menu">
@@ -296,7 +297,7 @@
             </div>
 
         </div>
-        <a href="#about"><span></span></a>
+        <a class="d-none d-md-block" href="#about"><span></span></a>
     </section>
     <!-- <section id="section05" class="demo">
     <a href="#section06"><span></span></a>
@@ -1121,6 +1122,16 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
+    
+    <script>
+        function technology() {
+                window.location.href = "tech.html";
+            }
+            function services() {
+                window.location.href = "service.html";
+            }
+    </script>
+    
 </body>
 
 </html>
