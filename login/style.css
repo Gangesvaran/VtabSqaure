@@ -101,7 +101,7 @@ form.sign-in-form {
   font-weight: 500;
 }
 
-.social-text {
+/* .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
 }
@@ -129,7 +129,7 @@ form.sign-in-form {
 .social-icon:hover {
   color: #4481eb;
   border-color: #4481eb;
-}
+} */
 
 .btn {
   width: 150px;
@@ -144,10 +144,17 @@ form.sign-in-form {
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
+
 }
 
 .btn:hover {
   background-color: #4d84e2;
+}
+
+.logo{
+width: 100px;
+height: 100px;
+border-radius: 50%;
 }
 
 .panels-container {
@@ -217,13 +224,14 @@ form.sign-in-form {
 }
 
 .btn.transparent {
-  margin: 0;
+  margin: 30px;
   background: none;
-  border: 2px solid #fff;
-  width: 130px;
+  border: 2px solid transparent;
+  width: 80px;
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
+
 }
 
 .right-panel .image,

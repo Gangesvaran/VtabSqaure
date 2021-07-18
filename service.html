@@ -23,241 +23,8 @@
 
     <title>VTab Square</title>
     <link rel="stylesheet" href="./assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/service.css">
   
-    
-    <style>
- header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
-  text-align: center;
-  color: #fff;
-  background-image:linear-gradient(rgba(15, 14, 14, 0.644),rgba(15, 12, 12, 0.555)) , url("../assets/Images/slide/Support & Quality.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
-  height: 500px;
-}
-header.masthead .masthead-subheading {
-  font-size: 1.5rem;
-  font-style: italic;
-  line-height: 1.5rem;
-  margin-bottom: 25px;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-header.masthead .masthead-heading {
-  font-size: 3.25rem;
-  font-weight: 700;
-  line-height: 3.25rem;
-  margin-bottom: 2rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 13rem;
-    padding-bottom: 12.5rem;
-  }
-  header.masthead .masthead-subheading {
-    font-size: 2.25rem;
-    font-style: italic;
-    line-height: 2.25rem;
-    margin-bottom: 2rem;
-  }
-  header.masthead .masthead-heading {
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 4.5rem;
-    margin-bottom: 4rem;
-  }
-}
-/*  */
-
-
-
-
-.blog-card {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem auto;
-  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.6%;
-  background: #fff;
-  line-height: 1.4;
-  font-family: sans-serif;
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 0;
-}
-.blog-card a {
-  color: inherit;
-}
-.blog-card a:hover {
-  color: #5ad67d;
-}
-.blog-card:hover .photo {
-  transform: scale(1.3) rotate(3deg);
-}
-.blog-card .meta {
-  position: relative;
-  z-index: 0;
-  height: 200px;
-}
-.blog-card .photo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.2s;
-}
-.blog-card .details,
-.blog-card .details ul {
-  margin: auto;
-  padding: 0;
-  list-style: none;
-}
-.blog-card .details {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -100%;
-  margin: auto;
-  transition: left 0.2s;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 10px;
-  width: 100%;
-  font-size: 0.9rem;
-}
-.blog-card .details a {
-  -webkit-text-decoration: dotted underline;
-          text-decoration: dotted underline;
-}
-.blog-card .details ul li {
-  display: inline-block;
-}
-.blog-card .details .author:before {
-  font-family: FontAwesome;
-  margin-right: 10px;
-  content: "";
-}
-.blog-card .details .date:before {
-  font-family: FontAwesome;
-  margin-right: 10px;
-  content: "";
-}
-.blog-card .details .tags ul:before {
-  font-family: FontAwesome;
-  content: "";
-  margin-right: 10px;
-}
-.blog-card .details .tags li {
-  margin-right: 2px;
-}
-.blog-card .details .tags li:first-child {
-  margin-left: -4px;
-}
-.blog-card .description {
-  padding: 1rem;
-  background: #fff;
-  position: relative;
-  z-index: 1;
-}
-.blog-card .description h1,
-.blog-card .description h2 {
-  font-family: Poppins, sans-serif;
-}
-.blog-card .description h1 {
-  line-height: 1;
-  margin: 0;
-  font-size: 1.7rem;
-}
-.blog-card .description h2 {
-  font-size: 1rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #a2a2a2;
-  margin-top: 5px;
-}
-.blog-card .description .read-more {
-  text-align: right;
-}
-.blog-card .description .read-more a {
-  color: #5ad67d;
-  display: inline-block;
-  position: relative;
-}
-.blog-card .description .read-more a:after {
-  content: "";
-  font-family: FontAwesome;
-  margin-left: -10px;
-  opacity: 0;
-  vertical-align: middle;
-  transition: margin 0.3s, opacity 0.3s;
-}
-.blog-card .description .read-more a:hover:after {
-  margin-left: 5px;
-  opacity: 1;
-}
-.blog-card p {
-  position: relative;
-  margin: 1rem 0 0;
-}
-.blog-card p:first-of-type {
-  margin-top: 1.25rem;
-}
-.blog-card p:first-of-type:before {
-  content: "";
-  position: absolute;
-  height: 5px;
-  background: #5ad67d;
-  width: 35px;
-  top: -0.75rem;
-  border-radius: 3px;
-}
-.blog-card:hover .details {
-  left: 0%;
-}
-@media (min-width: 640px) {
-  .blog-card {
-    flex-direction: row;
-    max-width: 1300px;
-  }
-  .blog-card .meta {
-    flex-basis: 40%;
-    height: auto;
-  }
-  .blog-card .description {
-    flex-basis: 60%;
-  }
-  .blog-card .description:before {
-    transform: skewX(-3deg);
-    content: "";
-    background: #fff;
-    width: 30px;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-  .blog-card.alt {
-    flex-direction: row-reverse;
-  }
-  .blog-card.alt .description:before {
-    left: inherit;
-    right: -10px;
-    transform: skew(3deg);
-  }
-  .blog-card.alt .details {
-    padding-left: 25px;
-  }
-}
-
-    </style>
 
 </head>
 
@@ -288,18 +55,18 @@ header.masthead .masthead-heading {
                     <!-- right side -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index1.html"> <i class="fas fa-home"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about"> <i
+                        <li class="nav-item"><a class="nav-link" href="./index1.html#about"> <i
                                     class="fas fa-info-circle me-2"></i>About</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle active" href="" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-user-cog me-2"></i>Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#web">Business Consulting &nbsp; &#9735;</a>
+                                <li><a class="dropdown-item" href="#Business Consulting">Business Consulting &nbsp; &#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Business plan</a></li>
-                                        <li><a class="dropdown-item" href="#">Estimation</a></li>
+                                        <li><a class="dropdown-item" href="#Business Consulting">Business plan</a></li>
+                                        <li><a class="dropdown-item" href="#Business Consulting">Estimation</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="dropdown-item" href="#dataint">IT Solutions
@@ -321,19 +88,19 @@ header.masthead .masthead-heading {
                                         <li><a class="dropdown-item" href="#">Automation</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="#busint">Support
+                                <li><a class="dropdown-item" href="#support">Support
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">L1</a></li>
-                                        <li><a class="dropdown-item" href="#">L2</a></li>
+                                        <li><a class="dropdown-item" href="#support">L1</a></li>
+                                        <li><a class="dropdown-item" href="#support">L2</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="#busint">IT Staffing
+                                <li><a class="dropdown-item" href="#IT Staffing">IT Staffing
                                     &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         &#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Resource OnBoarding</a></li>
-                                        <li><a class="dropdown-item" href="#">Contract Hiring</a></li>
+                                        <li><a class="dropdown-item" href="#IT Staffing">Resource OnBoarding</a></li>
+                                        <li><a class="dropdown-item" href="#IT Staffing">Contract Hiring</a></li>
                                     </ul>
                                 </li>
                                 <li><a class="dropdown-item" href="#busint" >Traning
@@ -418,61 +185,61 @@ header.masthead .masthead-heading {
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown"><i
+                            <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown" onclick="technology()"><i
                                     class="fab fa-accusoft"></i> Technology</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"> Web Development &nbsp;&nbsp;&#9735;</a>
+                                <li><a class="dropdown-item" href="./tech.html#webdevelopment"> Web Development &nbsp;&nbsp;&#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">HTML</a></li>
-                                        <li><a class="dropdown-item" href="#">CSS</a></li>
-                                        <li><a class="dropdown-item" href="#">PHP</a></li>
-                                        <li><a class="dropdown-item" href="#">JavaScript</a></li>
-                                        <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#html">HTML</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#css">CSS</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#php">PHP</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#js">JavaScript</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#bt">Bootstrap</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="#"> Data Integration
+                                <li><a class="dropdown-item" href="./tech.html#dataint"> Data Integration
                                         &nbsp;&nbsp;&nbsp;&#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Informatica</a></li>
-                                        <li><a class="dropdown-item" href="#">Informatica Cloud</a></li>
-                                        <li><a class="dropdown-item" href="#">SSRS</a></li>
-                                        <li><a class="dropdown-item" href="#">SSIS</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#informatica">Informatica</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#informatica cloud">Informatica Cloud</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#ssrs">SSRS</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#ssis">SSIS</a></li>
                                     </ul>
                                 </li>
-                                <li> <a class="dropdown-item" href="#"> Data Analytics
+                                <li> <a class="dropdown-item" href="./tech.html#Data analytics"> Data Analytics
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Tableau</a></li>
-                                        <li><a class="dropdown-item" href="#">PowerBI</a></li>
-                                        <li><a class="dropdown-item" href="#">Qlikview</a></li>
-                                        <li><a class="dropdown-item" href="#">Qliksense</a></li>
-                                        <li><a class="dropdown-item" href="#">Nprinting</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#tableau">Tableau</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#powerbi">PowerBI</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#qlikview">Qlikview</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#qlicksense">Qliksense</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#nprinting">Nprinting</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="#"> Quality Testing
+                                <li><a class="dropdown-item" href="./tech.html#Quality_testing"> Quality Testing
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Selinuim</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#selenium">Selinuim</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="dropdown-item" href="#"> Data Warehouse
+                                <li><a class="dropdown-item" href="./tech.html#Datawarehouse"> Data Warehouse
                                         &nbsp;&nbsp;&nbsp;&nbsp;&#9735;</a>
                                     <ul class="submenu dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">SQl Server</a></li>
-                                        <li><a class="dropdown-item" href="#">Oracle</a></li>
-                                        <li><a class="dropdown-item" href="#">Mysql</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#sqlserver">SQl Server</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#oracle">Oracle</a></li>
+                                        <li><a class="dropdown-item" href="./tech.html#mysql">Mysql</a></li>
                                     </ul>
                                 </li>
                         </li>
                         </li>
                     </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio"><i
+                    <li class="nav-item"><a class="nav-link" href="./index1.html#portfolio"><i
                                 class="far fa-file-word me-2"></i>Portfolio</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#team"><i
+                    <li class="nav-item"><a class="nav-link" href="#"><i
                                 class="fas fa-user-friends me-2"></i>Careers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact"><i
+                    <li class="nav-item"><a class="nav-link" href="./index1.html#contact"><i
                                 class="fas fa-id-card me-2"></i>Contact</a></li>
                     <li class="nav-item" id="nav-login"><a class="nav-link border border-white rounded-pill  me-3"
                             href="./login/sign.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
@@ -499,117 +266,174 @@ header.masthead .masthead-heading {
 <div class="container-fluid" style="height: 500px;">
         <header class="masthead">
             <div class="masthead-heading text-uppercase">Services</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#description">Read More</a>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#Business Consulting">Read More</a>
         </header>
     </div>
 <!-- end of Masthead -->
 
-<!--Decription-->
-<section id="description">
-<div class="container-fluid">
-<div class="blog-card my-5">
-    <div class="meta">
-      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
-      <ul class="details">
-        <li class="author"><a href="#">John Doe</a></li>
-        <li class="date">Aug. 24, 2015</li>
-        <li class="tags">
-          <ul>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="description">
-      <h1>Learning to Code</h1>
-      <h2>Opening a door to the future</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
-    </div>
+<!-- ============= Business Consulting ==============-->
+<section id="Business Consulting">
+<div class="container-fluid mb-5">
+    <div class="row">
+          <div class="container-fluid" data-aos="fade-up">
+              <header class="section-header mt-5">
+                  <h2 class="text-center">Business Consulting</h2>
+                  <p>
+                      Our management consulting services focus on our clients’ expectations and their end-to-end business needs. We analyze and provide our assistance in strategy, technology, transformation, digital, advanced analytics, and sustainability in their business. We bring changes in both organization and structure within a business to improvise the efficiency of the work they do, if necessary. We also support in handling IT challenges by providing intensive training and coaching, quality management, and IT and ERP architecture-related support.
+                  </p>
+              </header>
+  
+  <div class="grid">
+    <figure class="effect-marley">
+      <img src="assets/Images/slide/Business Consultant.jpg" style="height: 320px;" alt="img11"/>
+      <figcaption>
+        <h2>Business Plan </h2>
+        <p class="text-monospace">Planning strategically is more important than ever. A smart consultant plans out effective strategies to develop their
+        clients’ business skills and expertise. We deliver creative solutions that have helped our clients to develop and
+        execute winning strategies. We work with financial advisors to ensure that your projects are financially manageable and
+        profitable, and we foresee whether it’s feasible with the current resources and financial assets. We bring unrivaled
+        capabilities, tools, technologies, and talent to every engagement that will help to guide your company toward its
+        envisioned future.</p>
+      </figcaption>			
+    </figure>
+    <figure class="effect-marley">
+      <img src="https://oaksys.net/wp-content/uploads/2018/06/Oaksys-Test-estimation.png" style="height: 320px;"alt="img12"/>
+      <figcaption>
+        <h2>Estimation</h2>
+        <p class="text-monospace">Project estimation is>Project estimation is our prediction of how much cost and time is needed to complete a project. Before estimating, we
+        should analyze the infrastructure of a company and understand the team, deliverables, tasks, and process. We help the
+        clients’ to decide timeline by estimating complexity of the project. We provide the knowledge to analyze and estimate
+        the project and meet the expectation of the customer.</p>
+      </figcaption>			
+    </figure>
   </div>
-  <div class="blog-card alt my-5">
-    <div class="meta">
-      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
-      <ul class="details">
-        <li class="author"><a href="#">Jane Doe</a></li>
-        <li class="date">July. 15, 2015</li>
-        <li class="tags">
-          <ul>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">JavaScript</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="description">
-      <h1>Mastering the Language</h1>
-      <h2>Java is not the same as JavaScript</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
-    </div>
-  </div>
-  <div class="blog-card my-5">
-    <div class="meta">
-      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
-      <ul class="details">
-        <li class="author"><a href="#">John Doe</a></li>
-        <li class="date">Aug. 24, 2015</li>
-        <li class="tags">
-          <ul>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="description">
-      <h1>Learning to Code</h1>
-      <h2>Opening a door to the future</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
-    </div>
-  </div>
-  <div class="blog-card alt my-5">
-    <div class="meta">
-      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
-      <ul class="details">
-        <li class="author"><a href="#">Jane Doe</a></li>
-        <li class="date">July. 15, 2015</li>
-        <li class="tags">
-          <ul>
-            <li><a href="#">Learn</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">JavaScript</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="description">
-      <h1>Mastering the Language</h1>
-      <h2>Java is not the same as JavaScript</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
-      <p class="read-more">
-        <a href="#">Read More</a>
-      </p>
-    </div>
-  </div>
+
 </div>
 
 </section>
+<!-- ============ End of Business Consulting ================ -->
 
 
-    
+<!--============ Support ============ -->
+<section id="support">
+<div class="container-fluid mt-5">
+      <div class="row">
+          <div class="container-fluid" data-aos="fade-up">
+              <header class="section-header">
+                  <h2 class="text-center">Support</h2>
+              </header>
+  
+  <div class="grid">
+    <figure class="effect-marley">
+      <img src="assets/Images/slide/Support.jpg" style="height: 320px;" alt="img11"/>
+      <figcaption>
+        <h2>L1 </h2>
+        <p>Level 1 support is the first tier of support. It requires physical presence at the data centre. Technically it is simple to understand the type of work and responsibilities. This level is relevant to the support industry where clients can ask for help. It filters help desk calls and provides basic support and troubleshooting, such as password resets, printer,
+           hardware configurations, etc.</p>
+      </figcaption>			
+    </figure>
+    <figure class="effect-marley">
+      <img src="https://www.wksglobal.com/wp-content/uploads/2017/11/support.png"style="height: 320px;">
+      <figcaption>
+        <h2>L2</h2>
+        <p>Level 2 personnel take queries from Level 1. Technicians communicate with the user for an in-depth analysis of the problem before providing the solution. This involves all tasks related installation and configuration of software. Level 2 employees handle escalated issues which Level 1 support is not equipped with. Level 2 employees are experienced and have ability to resolve 80% of the issues over the phone or chat.
+                  </p>
+      </figcaption>			
+    </figure>
+  </div>
+  
+</div>
+</div>
+</section>
+<!--============ End of Data intergation ============ -->
+<!--============ IT Staffing============ -->
+<section id="IT Staffing">
+  <div class="container-fluid mt-5">
+      <div class="row">
+              <header class="section-header">
+                  <h2 class="text-center">IT Staffing</h2>
+              </header>
+              </div>
+                  <div class="container-fluid d-flex flex-row justify-content-around align-items-center">
+                      <div class="row d-flex flex-row justify-content-around align-items-center">
+                      <div class="card col-4 mt-2" style="width: 20rem;">
+                          <div class="face face1">
+                              <div class="content" width="250px"> 
+                                  <img src="https://elearningindustry.com/wp-content/uploads/2019/08/Dos-and-Donts-When-Designing-an-Employee-Onboarding-Program.jpg 
+                                  "style="width: 18rem;">
+                                  
+                              </div>
+                          </div>
+                          <div class="face face2">
+                              <div class="content">
+                                <h4 class="text-center text-uppercase">Resource On-boarding</h4>
+                                  <p>
+                                    Resource on-boarding is process of introducing a new employee into the organization and its culture. On-boarding activities involve the tools and information that are needed to interact with the team right after they’ve signed their offer letter. On-boarding may be a crucial neighborhood of helping employees understand their new position and job requirements. Employees will feel confident and competent when the on-boarding process is complete.
+                                    </p>
+                                      
+                              </div>
+                          </div>
+                        </div>
+                        <div class="card col-4 m-5" style="width: 18rem;">
+                          <div class="face face1">
+                              <div class="content"width="150px">
+                                  <img src="data:image/jpeg;base64,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"
+                                  style="width: 18rem;">
+                                 
+                              </div>
+                          </div>
+                          <div class="face face2">
+                              <div class="content">
+                                <h4 class="text-center text-uppercase">Contract hiring</h4>
+                                  <p> Contract staffing means an employee should sign and comply with the terms of an employer before working. Contractual work is usually for a specified amount of time and ends upon completion of a project or assignment. The payment will be on fixed terms with some provision for increment (usually predetermined). The contract hire is not given statutory benefits.</p>
+                              </div>
+                          </div>
+                        </div>  
+                  </div>
+                  </div>
+              </div>
+            </section>
+  <!--============ End of IT Staffing ============ -->
+
+
+
+
+ 
+   <!--  ================PAGE UP SECTION ================  -->
+     <button style="background:#212529; border-color:#212529" class="btn btn-primary scroll-top" data-scroll="up"
+     type="button">
+     <i class="fas fa-arrow-up"></i>
+ </button>
+
+
+ <!--  ================PAGE UP SECTION ================  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script>
+         $(document).ready(function () {
+      
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+              $('.scroll-top').fadeIn();
+          } else {
+              $('.scroll-top').fadeOut();
+          }
+      });
+  
+      $('.scroll-top').click(function () {
+          $("html, body").animate({
+              scrollTop: 0
+          }, 100);
+          return false;
+      });
+  
+  });
+ </script>
+
+<script>
+    function technology() {
+            window.location.href = "tech.html";
+        }
+      
+</script>
 </body>
 </html>

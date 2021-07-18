@@ -93,7 +93,26 @@
       window.addEventListener('load', headerScrolled)
       onscroll(document, headerScrolled)
     }
+  /* Text Animation*/ 
+  $(document).ready(function() {
+    $(".title").lettering();
   
+  });
+  
+  $(document).ready(function() {
+    animation();
+  }, 1000);
+  
+  function animation() {
+    var title1 = new TimelineMax({
+      repeat:-1, //-1 loop
+      repeatDelay:1,
+      yoyo:true  
+    });
+    title1.staggerFromTo(".title span", 0.5, 
+    {ease: Back.easeOut.config(2), opacity: 0, bottom: -80},
+    {ease: Back.easeOut.config(2), opacity: 1, bottom: 0}, 0.05);
+  };
     /**
      * Hero carousel indicators
      */
@@ -348,3 +367,5 @@
                 $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
               });
             });
+
+            

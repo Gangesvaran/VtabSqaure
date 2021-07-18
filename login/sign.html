@@ -32,7 +32,7 @@
             <div class="signin-signup">
                     <form action="#" method="POST" class="sign-in-form">
                     <img src="img/avatar.svg" width="100" height="100">
-                    <h2 class="title">SIGN IN</h2>
+                    <h2 class="title mt-5">EMPLOYEE</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" name="username" required />
@@ -44,44 +44,52 @@
                     <a href="#">Forgot Password?</a>
 
                     <input type="submit" value="Login" name="login" class="btn solid" />
-
-                    <p class="social-text">Or Sign in with social platforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
+                    
                 </form>
                 <form action="#" method="POST" class="sign-up-form">
                     <img src="img/avatar.svg" width="100" height="100">
-                    <h2 class="title">SIGN UP</h2>
+                    <h2 class="title">HR</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Username" name="username" required />
                     </div>
                     <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" name="email" required />
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" required />
                     </div>
+                    <a href="#">Forgot Password?</a>
+
+                    <input type="submit" value="Login" name="login" class="btn solid" />
+                </form>
+                <form action="#" method="POST" class="sign-in-hr">
+                    <img src="img/avatar.svg" width="100" height="100">
+                    <h2 class="title">Manager</h2>
                     <div class="input-field">
-                        <i class="fas fa-phone-square-alt"></i>
-                        <input type="tel" placeholder="Mobile" name="phone" required />
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" name="username" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" name="password" required />
                     </div>
+                    <a href="#">Forgot Password?</a>
 
-                    <input type="submit" class="btn" name="submit" value="Sign Up" />
+                    <input type="submit" value="Login" name="login" class="btn solid" />
+                </form>
+                <form action="#" method="POST" class="sign-in-pr">
+                    <img src="img/avatar.svg" width="100" height="100">
+                    <h2 class="title">Payrole</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" name="username" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" required />
+                    </div>
+                    <a href="#">Forgot Password?</a>
+
+                    <input type="submit" value="Login" name="login" class="btn solid" />
                 </form>
             </div>
         </div>
@@ -89,12 +97,19 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3> Didn't have account ?</h3>
-                    <p>
-                        Share your details and start journey with us
-                    </p>
+                    <h3> Pick Your Login</h3>
+                    
                     <button class="btn transparent" id="sign-up-btn">
-                        Sign Up
+                        <img class="logo" src="./img/avatar.svg" alt="">
+                        <p style="font-size: 15px;" class="text-uppercase text-center mt-5">HR</p>
+                    </button>
+                    <button class="btn transparent" id="sign-up-btn">
+                        <img class="logo" src="./img/avatar.svg" alt="">
+                        <p style="font-size: 15px;" class="text-uppercase text-center mt-5">Manager</p>
+                    </button>
+                    <button class="btn transparent" id="sign-up-btn">
+                        <img class="logo" src="./img/avatar.svg" alt="">
+                        <p style="font-size: 15px;" class="text-uppercase text-center mt-5">Payrole</p>
                     </button>
                 </div>
 
