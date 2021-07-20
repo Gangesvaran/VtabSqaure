@@ -101,6 +101,28 @@ form.sign-in-form {
   font-weight: 500;
 }
 
+.dropdown{
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+select{
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
@@ -217,13 +239,14 @@ form.sign-in-form {
 }
 
 .btn.transparent {
-  margin: 0;
+  margin:  0;
   background: none;
-  border: 2px solid #fff;
-  width: 130px;
-  height: 41px;
+  border: transparent;
+  width: 50px;
+  height: 50px;
   font-weight: 600;
   font-size: 0.8rem;
+  padding: 0px 50px;
 }
 
 .right-panel .image,
