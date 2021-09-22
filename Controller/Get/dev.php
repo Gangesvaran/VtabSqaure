@@ -2,8 +2,8 @@
 // require_once "../dbConfig.php";
 require_once("../dbLocal.php");
 // if(isset($_POST['get'])){
-$id=$_POST['user_id'];
-$sql="SELECT * FROM  `development`,`user` WHERE development.user_id=user.user_id AND user.user_id=$id";
+$id=$_POST['perf_id'];
+$sql="SELECT * FROM  `performance`,`user` WHERE performance.perf_id=user.user_id AND user.user_id=$id";
 
 $res= mysqli_query($conn,$sql);
 if($res){

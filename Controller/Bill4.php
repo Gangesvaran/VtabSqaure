@@ -7,11 +7,11 @@ class PDF extends FPDF
 // Page header
 function Header()
 {
-   $this->Image('..\View\assets\Images\VTabicon.jpg',10,6,15,'jpg');
+    $this->Image('../View/assets/Images/VTabicon.jpg',10,6,25,25,'jpg');
     // Arial bold 25
     $this->SetFont('times','B',25);
     // Move to the right
-    $this->Cell(80);
+    $this->Cell(80);    
     // Title
     $this->Cell(30,10,'VTAB SQUARE PVT LTD',0,1,'C');
     $this->SetFont('times', 'B', 15);

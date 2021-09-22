@@ -8,7 +8,7 @@ class PDF extends FPDF
 function Header()
 {
     // Logo
-    $this->Image('..\View\assets\Images\VTabicon.jpg',10,6,30,'jpg');
+    $this->Image('../View/assets/Images/VTabicon.jpg',10,6,25,25,'jpg');
     // Arial bold 25
     $this->SetFont('times','B',25);
     // Move to the right
@@ -31,7 +31,7 @@ function Header()
 $pdf = new PDF('P','mm','A4');
 $pdf->AliasNbPages();
 $pdf->AddPage();
-$pdf->Image('..\View\assets\Images\logo.jpg', 50,80, 110, 110);
+$pdf->Image('../View/assets/Images/logo.jpg', 50,80, 110, 110);
 $pdf->SetAutoPageBreak(true, 20);
 $sql= "SELECT * FROM `mock_data`";
 $res= mysqli_query($conn,$sql);
