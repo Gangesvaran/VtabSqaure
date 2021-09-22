@@ -7,7 +7,7 @@ const Navbar = () => {
                 <div className="container-fluid">
                     <div className="d-flex">
                         <a className="navbar-brand" href="#">
-                            <img src="admin\image\VTa" alt="" width="30" height="24" className="d-inline-block align-text-top me-2" />
+                            <img src="/admin/image/VTabicon.ico" alt="" width="30" height="24" className="d-inline-block align-text-top me-2" />
                             Vtab Square
                         </a>
                         <form className="d-flex">
