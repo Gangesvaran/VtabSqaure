@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import "./Navbar.css";
 
 const Navbar = () => {
     return (
-        <div>
+        <div id="nav-container" className="bg-primary">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
                     <div className="d-flex">
@@ -15,10 +16,8 @@ const Navbar = () => {
                                 <span class="input-group-text" id="search-box">
                                     <i class="fas fa-search"></i>
                                 </span>
-                                <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="Search-box"/>
+                                <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="Search-box" />
                             </div>
-
-
                         </form>
                     </div>
                     <div>
